@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trionix Tickets · Soporte con Agentes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Trionix Labs</h1>
+    <p>Sistema de tickets de soporte con agentes</p>
+  </header>
+
+  <!-- Aquí se muestran los errores y los avisos de éxito -->
+  <div id="mensaje" class="mensaje" hidden></div>
+
+  <main class="container">
+    <div class="columnas">
+      <!-- Formulario: nuevo ticket -->
+      <section class="card">
+        <h2>Nuevo ticket</h2>
+        <form id="form-ticket">
+          <label>Cliente
+            <input name="cliente" type="text" placeholder="Nombre del cliente" />
+          </label>
+          <label>Asunto
+            <input name="asunto" type="text" placeholder="Describe el problema (mín. 5 caracteres)" />
+          </label>
+          <label>Prioridad
+            <select name="prioridad">
+              <option value="baja">Baja</option>
+              <option value="media" selected>Media</option>
+              <option value="alta">Alta</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primario">Crear ticket</button>
+        </form>
+      </section>
+
+      <!-- Formulario: nuevo agente -->
+      <section class="card">
+        <h2>Nuevo agente</h2>
+        <form id="form-agente">
+          <label>Nombre
+            <input name="nombre" type="text" placeholder="Nombre del agente" />
+          </label>
+          <label>Correo
+            <input name="email" type="text" placeholder="agente@trionix.com" />
+          </label>
+          <label>Especialidad
+            <select name="especialidad">
+              <option value="redes">Redes</option>
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+              <option value="general" selected>General</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primario">Crear agente</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Lista de agentes -->
+    <section class="card">
+      <h2>Agentes</h2>
+      <ul id="lista-agentes" class="lista"></ul>
+    </section>
+
+    <!-- Lista de tickets -->
+    <section class="card">
+      <h2>Tickets</h2>
+      <ul id="lista-tickets" class="lista"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
