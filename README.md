@@ -9,7 +9,7 @@ Sistema de gestión de tickets de soporte técnico para Trionix Labs. Permite re
 
 ## URL pública
 
-[PEGAR AQUÍ LA URL DE LA APLICACIÓN DESPLEGADA]
+https://trionix-tickets-agentes.onrender.com/
 
 ## Cómo correrlo localmente
 
